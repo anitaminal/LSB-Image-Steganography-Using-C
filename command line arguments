@@ -1,0 +1,30 @@
+Compilation and Execution
+
+1. Compile the Source Files
+Compile all C source files using GCC:
+
+gcc *.c
+
+This generates an executable named `a.out` by default.
+
+2. Encoding
+
+./a.out -e beautiful.bmp secret.txt [stegno.bmp]
+
+Arguments:
+- `./a.out` – The executable file generated after compilation.
+- `-e` – Specifies the encoding operation.
+- `beautiful.bmp` – The input BMP image used to hide the secret data.
+- `secret.txt` – The text file containing the secret message.
+- `[stegno.bmp]` – An optional output BMP filename for the encoded image. If omitted, the application generates an output filename according to its implementation.
+
+3. Decoding
+
+./a.out -d stego.bmp data.txt
+
+Arguments:
+- `./a.out` – The executable file generated after compilation.
+- `-d` – Specifies the decoding operation.
+- `stego.bmp` – The input BMP image containing the hidden message.
+- `data.txt` – The output text file in which the decoded secret message is stored. If omitted, the application generates an output filename according to its implementation.
+
